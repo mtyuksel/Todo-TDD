@@ -5,6 +5,7 @@
     "test": "gauge run specs/"
   },
   "dependencies": {
+    "chai": "^4.3.4",
     "taiko": "latest"
   }
 }
