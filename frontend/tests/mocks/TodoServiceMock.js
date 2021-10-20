@@ -5,6 +5,6 @@ export async function getAll() {
 }
 
 export async function add(taskName) {
-    body = {name: taskName}
+    let body = {name: taskName}
     return axios.post('http://localhost:9001/tasks/add', body);
 }
