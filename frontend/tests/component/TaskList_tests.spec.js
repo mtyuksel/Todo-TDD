@@ -1,6 +1,8 @@
 import { shallowMount } from '@vue/test-utils'
 import TaskList from '@/components/TaskList.vue'
 
+const { text } = require('taiko')
+
 describe('TaskList.vue', () => {
     it('should render todo list with given tasks', () => {
         const wrapper = shallowMount(TaskList, {
@@ -18,5 +20,6 @@ describe('TaskList.vue', () => {
         })
 
         expect(wrapper.find('.taskList').exists()).toBeTruthy()
+        expect(wrapper.findAll('.taskItem').length).toBe(5)
     })
 })
