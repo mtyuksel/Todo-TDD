@@ -15,6 +15,7 @@ import { eventBus } from "../main";
 import { add } from "../client/TodoService";
 
 export default {
+  name: "TaskAdd",
   data: function () {
     return {
       taskName: "",

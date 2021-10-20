@@ -1,19 +1,38 @@
 <template>
-  <div class="task-list">
+  <div id="task-list">
     <ul class="taskList">
-      <li class="taskItem">Task - 1</li>
-      <li class="taskItem">Task - 2</li>
-      <li class="taskItem">Task - 3</li>
-      <li class="taskItem">Task - 4</li>
+      <li v-for="task in tasks" :key="task.id">
+        {{ task.name }} - {{ task.id }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
+import { eventBus } from "../main";
+import { getAll } from "../client/TodoService";
 export default {
-  name: "TaskAdd",
+  name: "TaskList",
+  data: function () {
+    return {
+      tasks: Array,
+    };
+  },
+  methods: {
+    getTasks: function () {
+      getAll().then((data) => {
+        this.tasks = data;
+      });
+    },
+  },
+  created() {
+    this.getTasks();
+    eventBus.$on("taskAdded", (newTask) => {
+      this.tasks.push(newTask);
+    });
+  },
 };
 </script>
 
-<style scoped>
+<style>
 </style>
