@@ -7,11 +7,14 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "test": "jest"
+    "test": "jest",
+    "cdc:publish": "node tests/pact/publisher.js"
   },
   "dependencies": {
+    "@pact-foundation/pact": "^9.16.4",
     "axios": "^0.23.0",
     "core-js": "^3.6.5",
+    "jest-pact": "^0.9.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {

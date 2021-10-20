@@ -1,0 +1,173 @@
+I, [2021-10-20T15:44:51.833410 #66389]  INFO -- : Registered expected interaction GET /tasks/getall
+D, [2021-10-20T15:44:51.833608 #66389] DEBUG -- : {
+  "description": "A request for get all tasks",
+  "providerState": "i have not empty tasks",
+  "request": {
+    "method": "GET",
+    "path": "/tasks/getall"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "1"
+        },
+        "name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Buy some milk"
+        }
+      },
+      {
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "2"
+        },
+        "name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Visit parents"
+        }
+      },
+      {
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "3"
+        },
+        "name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Do homewoks"
+        }
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2021-10-20T15:44:51.848768 #66389]  INFO -- : Received request GET /tasks/getall
+D, [2021-10-20T15:44:51.848891 #66389] DEBUG -- : {
+  "path": "/tasks/getall",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "http://localhost/",
+    "User-Agent": "Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/15.2.1",
+    "Accept-Language": "en",
+    "Origin": "http://localhost",
+    "Host": "localhost:9001",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-10-20T15:44:51.849172 #66389]  INFO -- : Found matching response for GET /tasks/getall
+D, [2021-10-20T15:44:51.849289 #66389] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": [
+    {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "1"
+      },
+      "name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Buy some milk"
+      }
+    },
+    {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "2"
+      },
+      "name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Visit parents"
+      }
+    },
+    {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "3"
+      },
+      "name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Do homewoks"
+      }
+    }
+  ]
+}
+I, [2021-10-20T15:44:51.863236 #66389]  INFO -- : Verifying - interactions matched
+I, [2021-10-20T15:44:51.866240 #66389]  INFO -- : Cleared interactions
+I, [2021-10-20T15:44:51.870407 #66389]  INFO -- : Registered expected interaction POST /tasks/add
+D, [2021-10-20T15:44:51.870498 #66389] DEBUG -- : {
+  "description": "A request for add new task",
+  "providerState": "i have a task",
+  "request": {
+    "method": "POST",
+    "path": "/tasks/add",
+    "body": {
+      "name": "Buy some milk"
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+    },
+    "body": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "1"
+      },
+      "name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Buy some milk"
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2021-10-20T15:44:51.877437 #66389]  INFO -- : Received request POST /tasks/add
+D, [2021-10-20T15:44:51.877540 #66389] DEBUG -- : {
+  "path": "/tasks/add",
+  "query": "",
+  "method": "post",
+  "body": {
+    "name": "Buy some milk"
+  },
+  "headers": {
+    "Content-Length": "24",
+    "Content-Type": "application/json",
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "http://localhost/",
+    "User-Agent": "Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/15.2.1",
+    "Accept-Language": "en",
+    "Origin": "http://localhost",
+    "Host": "localhost:9001",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-10-20T15:44:51.877911 #66389]  INFO -- : Found matching response for POST /tasks/add
+D, [2021-10-20T15:44:51.877999 #66389] DEBUG -- : {
+  "status": 201,
+  "headers": {
+  },
+  "body": {
+    "id": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "1"
+    },
+    "name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Buy some milk"
+    }
+  }
+}
+I, [2021-10-20T15:44:51.884844 #66389]  INFO -- : Verifying - interactions matched
+I, [2021-10-20T15:44:51.887829 #66389]  INFO -- : Cleared interactions
+I, [2021-10-20T15:44:51.891166 #66389]  INFO -- : Merging interactions into pact for backend at /Users/mehmet.yuksel/Desktop/Todo-TDD/frontend/pact/pacts/frontend-backend.json

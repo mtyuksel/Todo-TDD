@@ -1,0 +1,90 @@
+{
+  "consumer": {
+    "name": "frontend"
+  },
+  "provider": {
+    "name": "backend"
+  },
+  "interactions": [
+    {
+      "description": "A request for get all tasks",
+      "providerState": "i have not empty tasks",
+      "request": {
+        "method": "GET",
+        "path": "/tasks/getall"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "id": "1",
+            "name": "Buy some milk"
+          },
+          {
+            "id": "2",
+            "name": "Visit parents"
+          },
+          {
+            "id": "3",
+            "name": "Do homewoks"
+          }
+        ],
+        "matchingRules": {
+          "$.body[0].id": {
+            "match": "type"
+          },
+          "$.body[0].name": {
+            "match": "type"
+          },
+          "$.body[1].id": {
+            "match": "type"
+          },
+          "$.body[1].name": {
+            "match": "type"
+          },
+          "$.body[2].id": {
+            "match": "type"
+          },
+          "$.body[2].name": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "A request for add new task",
+      "providerState": "i have a task",
+      "request": {
+        "method": "POST",
+        "path": "/tasks/add",
+        "body": {
+          "name": "Buy some milk"
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+        },
+        "body": {
+          "id": "1",
+          "name": "Buy some milk"
+        },
+        "matchingRules": {
+          "$.body.id": {
+            "match": "type"
+          },
+          "$.body.name": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
