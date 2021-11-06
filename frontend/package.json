@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "test": "jest",
-    "cdc:publish": "node tests/pact/publisher.js"
+    "test": "jest tests/*",
+    "test:cdc": "jest tests/pact/*",
+    "test:unit": "jest tests/unit/*",
+    "test:component": "jest tests/component/*",
+    "cdc:publish": "node test-utils/publishers/publisher.js"
   },
   "dependencies": {
     "@pact-foundation/pact": "^9.16.4",
