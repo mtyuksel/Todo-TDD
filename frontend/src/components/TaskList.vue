@@ -1,7 +1,7 @@
 <template>
   <div id="task-list">
     <ul class="taskList">
-      <li v-for="task in tasks" :key="task.id">
+      <li class="taskItem" v-for="task in tasks" :key="task.id">
         {{ task.name }} - {{ task.id }}
       </li>
     </ul>
