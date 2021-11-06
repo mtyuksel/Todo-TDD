@@ -29,7 +29,8 @@ export default {
       }     
       add(this.taskName)
         .then((res) => {
-          eventBus.addTask(res);
+          if(res.data.success)
+            eventBus.addTask(res.data.data);
         })
         .catch((err) => {
           console.log("An error occured!", err);

@@ -22,27 +22,35 @@ pactWith(
                     },
                     willRespondWith: {
                         status: 200,
-                        body: [
-                            {
-                                id: Matchers.like('1'),
-                                name: Matchers.like('Buy some milk'),
-                            },
-                            {
-                                id: Matchers.like('2'),
-                                name: Matchers.like('Visit parents'),
-                            },
-                            {
-                                id: Matchers.like('3'),
-                                name: Matchers.like('Do homewoks'),
-                            },
-                        ],
+                        body:
+                        {
+                            success: true,
+                            message: Matchers.like(''),
+                            data: {
+                                todolist: Matchers.like([
+                                    {
+                                        id: Matchers.like('1'),
+                                        name: Matchers.like('Buy some milk'),
+                                    },
+                                    {
+                                        id: Matchers.like('2'),
+                                        name: Matchers.like('Visit parents'),
+                                    },
+                                    {
+                                        id: Matchers.like('3'),
+                                        name: Matchers.like('Do homewoks'),
+                                    },
+                                ]),
+                            }
+                        }
                     },
                 })
 
                 let data = []
 
                 await getAll().then((res) => {
-                    data = res.data
+                    console.log('***********', res.data.data.todolist)
+                    data = res.data.data.todolist
                 })
 
                 expect(data).toEqual(
@@ -78,8 +86,14 @@ pactWith(
                         status: 201,
                         body:
                         {
-                            id: Matchers.like('1'),
-                            name: Matchers.like('Buy some milk'),
+                            success: true,
+                            message: Matchers.like(''),
+                            data: {
+                                todo: {
+                                    id: Matchers.like('1'),
+                                    name: Matchers.like('Buy some milk'),
+                                }
+                            }
                         },
                     },
                 })
@@ -88,7 +102,7 @@ pactWith(
                 let data = {}
 
                 await add(taskName).then((res) => {
-                    data = res.data
+                    data = res.data.data.todo
                 })
 
                 expect(data).toEqual(

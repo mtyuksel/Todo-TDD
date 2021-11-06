@@ -20,8 +20,8 @@ export default {
   },
   methods: {
     getTasks: function () {
-      getAll().then((data) => {
-        this.tasks = data;
+      getAll().then((res) => {
+        this.tasks = res.data.data.todolist;
       });
     },
   },

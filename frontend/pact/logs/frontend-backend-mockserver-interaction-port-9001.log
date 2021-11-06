@@ -1,5 +1,5 @@
-I, [2021-11-06T17:04:26.719878 #1302]  INFO -- : Registered expected interaction GET /tasks/getall
-D, [2021-11-06T17:04:26.720144 #1302] DEBUG -- : {
+I, [2021-11-06T21:41:48.840032 #11092]  INFO -- : Registered expected interaction GET /tasks/getall
+D, [2021-11-06T21:41:48.840276 #11092] DEBUG -- : {
   "description": "A request for get all tasks",
   "providerState": "i have not empty tasks",
   "request": {
@@ -10,43 +10,55 @@ D, [2021-11-06T17:04:26.720144 #1302] DEBUG -- : {
     "status": 200,
     "headers": {
     },
-    "body": [
-      {
-        "id": {
-          "json_class": "Pact::SomethingLike",
-          "contents": "1"
-        },
-        "name": {
-          "json_class": "Pact::SomethingLike",
-          "contents": "Buy some milk"
-        }
+    "body": {
+      "success": true,
+      "message": {
+        "json_class": "Pact::SomethingLike",
+        "contents": ""
       },
-      {
-        "id": {
+      "data": {
+        "todolist": {
           "json_class": "Pact::SomethingLike",
-          "contents": "2"
-        },
-        "name": {
-          "json_class": "Pact::SomethingLike",
-          "contents": "Visit parents"
-        }
-      },
-      {
-        "id": {
-          "json_class": "Pact::SomethingLike",
-          "contents": "3"
-        },
-        "name": {
-          "json_class": "Pact::SomethingLike",
-          "contents": "Do homewoks"
+          "contents": [
+            {
+              "id": {
+                "json_class": "Pact::SomethingLike",
+                "contents": "1"
+              },
+              "name": {
+                "json_class": "Pact::SomethingLike",
+                "contents": "Buy some milk"
+              }
+            },
+            {
+              "id": {
+                "json_class": "Pact::SomethingLike",
+                "contents": "2"
+              },
+              "name": {
+                "json_class": "Pact::SomethingLike",
+                "contents": "Visit parents"
+              }
+            },
+            {
+              "id": {
+                "json_class": "Pact::SomethingLike",
+                "contents": "3"
+              },
+              "name": {
+                "json_class": "Pact::SomethingLike",
+                "contents": "Do homewoks"
+              }
+            }
+          ]
         }
       }
-    ]
+    }
   },
   "metadata": null
 }
-I, [2021-11-06T17:04:26.729659 #1302]  INFO -- : Received request GET /tasks/getall
-D, [2021-11-06T17:04:26.729753 #1302] DEBUG -- : {
+I, [2021-11-06T21:41:48.856792 #11092]  INFO -- : Received request GET /tasks/getall
+D, [2021-11-06T21:41:48.856901 #11092] DEBUG -- : {
   "path": "/tasks/getall",
   "query": "",
   "method": "get",
@@ -62,48 +74,60 @@ D, [2021-11-06T17:04:26.729753 #1302] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-11-06T17:04:26.730048 #1302]  INFO -- : Found matching response for GET /tasks/getall
-D, [2021-11-06T17:04:26.730153 #1302] DEBUG -- : {
+I, [2021-11-06T21:41:48.857222 #11092]  INFO -- : Found matching response for GET /tasks/getall
+D, [2021-11-06T21:41:48.857355 #11092] DEBUG -- : {
   "status": 200,
   "headers": {
   },
-  "body": [
-    {
-      "id": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "1"
-      },
-      "name": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "Buy some milk"
-      }
+  "body": {
+    "success": true,
+    "message": {
+      "json_class": "Pact::SomethingLike",
+      "contents": ""
     },
-    {
-      "id": {
+    "data": {
+      "todolist": {
         "json_class": "Pact::SomethingLike",
-        "contents": "2"
-      },
-      "name": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "Visit parents"
-      }
-    },
-    {
-      "id": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "3"
-      },
-      "name": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "Do homewoks"
+        "contents": [
+          {
+            "id": {
+              "json_class": "Pact::SomethingLike",
+              "contents": "1"
+            },
+            "name": {
+              "json_class": "Pact::SomethingLike",
+              "contents": "Buy some milk"
+            }
+          },
+          {
+            "id": {
+              "json_class": "Pact::SomethingLike",
+              "contents": "2"
+            },
+            "name": {
+              "json_class": "Pact::SomethingLike",
+              "contents": "Visit parents"
+            }
+          },
+          {
+            "id": {
+              "json_class": "Pact::SomethingLike",
+              "contents": "3"
+            },
+            "name": {
+              "json_class": "Pact::SomethingLike",
+              "contents": "Do homewoks"
+            }
+          }
+        ]
       }
     }
-  ]
+  }
 }
-I, [2021-11-06T17:04:26.743053 #1302]  INFO -- : Verifying - interactions matched
-I, [2021-11-06T17:04:26.745991 #1302]  INFO -- : Cleared interactions
-I, [2021-11-06T17:04:26.749199 #1302]  INFO -- : Registered expected interaction POST /tasks/add
-D, [2021-11-06T17:04:26.749302 #1302] DEBUG -- : {
+I, [2021-11-06T21:41:48.878664 #11092]  INFO -- : Verifying - interactions matched
+I, [2021-11-06T21:41:48.881939 #11092]  INFO -- : Cleared interactions
+I, [2021-11-06T21:41:48.886354 #11092]  INFO -- : Registered expected interaction POST /tasks/add
+D, [2021-11-06T21:41:48.886451 #11092] DEBUG -- : {
   "description": "A request for add new task",
   "providerState": "i have a task",
   "request": {
@@ -118,20 +142,29 @@ D, [2021-11-06T17:04:26.749302 #1302] DEBUG -- : {
     "headers": {
     },
     "body": {
-      "id": {
+      "success": true,
+      "message": {
         "json_class": "Pact::SomethingLike",
-        "contents": "1"
+        "contents": ""
       },
-      "name": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "Buy some milk"
+      "data": {
+        "todo": {
+          "id": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "1"
+          },
+          "name": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "Buy some milk"
+          }
+        }
       }
     }
   },
   "metadata": null
 }
-I, [2021-11-06T17:04:26.756150 #1302]  INFO -- : Received request POST /tasks/add
-D, [2021-11-06T17:04:26.756273 #1302] DEBUG -- : {
+I, [2021-11-06T21:41:48.893297 #11092]  INFO -- : Received request POST /tasks/add
+D, [2021-11-06T21:41:48.893425 #11092] DEBUG -- : {
   "path": "/tasks/add",
   "query": "",
   "method": "post",
@@ -152,22 +185,32 @@ D, [2021-11-06T17:04:26.756273 #1302] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-11-06T17:04:26.756614 #1302]  INFO -- : Found matching response for POST /tasks/add
-D, [2021-11-06T17:04:26.756714 #1302] DEBUG -- : {
+I, [2021-11-06T21:41:48.894114 #11092]  INFO -- : Found matching response for POST /tasks/add
+D, [2021-11-06T21:41:48.894210 #11092] DEBUG -- : {
   "status": 201,
   "headers": {
   },
   "body": {
-    "id": {
+    "success": true,
+    "message": {
       "json_class": "Pact::SomethingLike",
-      "contents": "1"
+      "contents": ""
     },
-    "name": {
-      "json_class": "Pact::SomethingLike",
-      "contents": "Buy some milk"
+    "data": {
+      "todo": {
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "1"
+        },
+        "name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Buy some milk"
+        }
+      }
     }
   }
 }
-I, [2021-11-06T17:04:26.762191 #1302]  INFO -- : Verifying - interactions matched
-I, [2021-11-06T17:04:26.764987 #1302]  INFO -- : Cleared interactions
-I, [2021-11-06T17:04:26.767901 #1302]  INFO -- : Merging interactions into pact for backend at /Users/mehmet.yuksel/Desktop/Todo-TDD/frontend/pact/pacts/frontend-backend.json
+I, [2021-11-06T21:41:48.900065 #11092]  INFO -- : Verifying - interactions matched
+I, [2021-11-06T21:41:48.903210 #11092]  INFO -- : Cleared interactions
+I, [2021-11-06T21:41:48.906539 #11092]  INFO -- : Merging interactions into pact for backend at /Users/mehmet.yuksel/Desktop/Todo-TDD/frontend/pact/pacts/frontend-backend.json
+E, [2021-11-06T21:41:48.908100 #11092] ERROR -- : An interaction with same description ("A request for get all tasks") and provider state ("i have not empty tasks") but a different response body has already been used. Please use a different description or provider state, or remove any random data in the interaction.
