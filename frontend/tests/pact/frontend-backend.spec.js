@@ -1,6 +1,6 @@
 import { pactWith } from 'jest-pact'
 import { Matchers } from '@pact-foundation/pact'
-import { getAll, add } from '../mocks/TodoServiceMock'
+import { getAll, add } from '../../test-utils/mocks/TodoServiceMock'
 
 pactWith(
     {
