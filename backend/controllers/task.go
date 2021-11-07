@@ -18,7 +18,14 @@ func (controller TaskController) Add(ctx *fiber.Ctx) error {
 	ctx.BodyParser(&task)
 	ctx.Status(fiber.StatusCreated)
 
-	responseForPact := models.Task{Id: "5", Name: task.Name}
+	responseForPact := models.Response{
+		Success: true,
+		Message: "",
+		Data: models.TaskDTO{
+			Task: models.Task{Id: "5", Name: task.Name},
+		},
+	}
+
 	ctx.JSON(responseForPact)
 
 	return nil
@@ -26,11 +33,19 @@ func (controller TaskController) Add(ctx *fiber.Ctx) error {
 
 func (controller TaskController) GetAll(ctx *fiber.Ctx) error {
 	var tasks []models.Task = []models.Task{
-		{Id: "1", Name: "Task 1"},
-		{Id: "2", Name: "Task 2"},
-		{Id: "3", Name: "Task 3"},
+		{Id: "1", Name: "Test Task 1"},
+		{Id: "2", Name: "Test Task 2"},
+		{Id: "3", Name: "Test Task 3"},
 	}
 
-	ctx.JSON(tasks)
+	responseForPact := models.Response{
+		Success: true,
+		Message: "",
+		Data: models.TaskListDTO{
+			Todolist: tasks,
+		},
+	}
+
+	ctx.JSON(responseForPact)
 	return nil
 }

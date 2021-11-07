@@ -1,0 +1,61 @@
+# Logfile created on 2021-11-06 22:02:16 +0300 by logger.rb/47272
+I, [2021-11-06T22:02:22.862762 #13329]  INFO -- : Running example 'Verifying a pact between frontend and backend [PENDING] Given i have not empty tasks A request for get all tasks with GET /tasks/getall returns a response which has status code 200'
+I, [2021-11-06T22:02:22.871832 #13329]  INFO -- : Sending GET request to path: "/tasks/getall" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have not empty tasks"}]}, see debug logs for body
+D, [2021-11-06T22:02:22.871893 #13329] DEBUG -- : body :
+I, [2021-11-06T22:02:22.889075 #13329]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"126", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:02:22 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:02:22.889141 #13329] DEBUG -- : body: {"success":true,"message":"","tasklist":[{"id":"31","name":"Task 1"},{"id":"32","name":"Task 2"},{"id":"33","name":"Task 3"}]}
+I, [2021-11-06T22:02:22.893387 #13329]  INFO -- : Running example 'Verifying a pact between frontend and backend [PENDING] Given i have a task A request for add new task with POST /tasks/add returns a response which has status code 201'
+I, [2021-11-06T22:02:22.894871 #13329]  INFO -- : Sending POST request to path: "/tasks/add" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have a task"}]}, see debug logs for body
+D, [2021-11-06T22:02:22.894923 #13329] DEBUG -- : body :{"name":"Buy some milk"}
+I, [2021-11-06T22:02:22.896932 #13329]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"58", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:02:22 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:02:22.896981 #13329] DEBUG -- : body: {"success":true,"message":"","todo":{"id":"35","name":""}}
+I, [2021-11-06T22:04:17.156987 #13569]  INFO -- : Running example 'Verifying a pact between frontend and backend [PENDING] Given i have not empty tasks A request for get all tasks with GET /tasks/getall returns a response which has status code 200'
+I, [2021-11-06T22:04:17.165902 #13569]  INFO -- : Sending GET request to path: "/tasks/getall" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have not empty tasks"}]}, see debug logs for body
+D, [2021-11-06T22:04:17.165964 #13569] DEBUG -- : body :
+I, [2021-11-06T22:04:17.183407 #13569]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"122", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:04:17 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:04:17.183476 #13569] DEBUG -- : body: {"success":true,"message":"","data":[{"id":"31","name":"Task 1"},{"id":"32","name":"Task 2"},{"id":"33","name":"Task 3"}]}
+I, [2021-11-06T22:04:17.188725 #13569]  INFO -- : Running example 'Verifying a pact between frontend and backend [PENDING] Given i have a task A request for add new task with POST /tasks/add returns a response which has status code 201'
+I, [2021-11-06T22:04:17.190605 #13569]  INFO -- : Sending POST request to path: "/tasks/add" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have a task"}]}, see debug logs for body
+D, [2021-11-06T22:04:17.190685 #13569] DEBUG -- : body :{"name":"Buy some milk"}
+I, [2021-11-06T22:04:17.192791 #13569]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"58", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:04:17 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:04:17.192835 #13569] DEBUG -- : body: {"success":true,"message":"","data":{"id":"35","name":""}}
+I, [2021-11-06T22:18:39.111971 #14821]  INFO -- : Running example 'Verifying a pact between frontend and backend [PENDING] Given i have not empty tasks A request for get all tasks with GET /tasks/getall returns a response which has status code 200'
+I, [2021-11-06T22:18:39.121091 #14821]  INFO -- : Sending GET request to path: "/tasks/getall" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have not empty tasks"}]}, see debug logs for body
+D, [2021-11-06T22:18:39.121168 #14821] DEBUG -- : body :
+I, [2021-11-06T22:18:39.137851 #14821]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"135", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:18:39 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:18:39.137909 #14821] DEBUG -- : body: {"success":true,"message":"","data":{"todolist":[{"id":"31","name":"Task 1"},{"id":"32","name":"Task 2"},{"id":"33","name":"Task 3"}]}}
+I, [2021-11-06T22:18:39.139549 #14821]  INFO -- : Running example 'Verifying a pact between frontend and backend [PENDING] Given i have a task A request for add new task with POST /tasks/add returns a response which has status code 201'
+I, [2021-11-06T22:18:39.140831 #14821]  INFO -- : Sending POST request to path: "/tasks/add" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have a task"}]}, see debug logs for body
+D, [2021-11-06T22:18:39.140878 #14821] DEBUG -- : body :{"name":"Buy some milk"}
+I, [2021-11-06T22:18:39.142750 #14821]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"67", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:18:39 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:18:39.142787 #14821] DEBUG -- : body: {"success":true,"message":"","data":{"todo":{"id":"35","name":""}}}
+I, [2021-11-06T22:20:02.356482 #15053]  INFO -- : Running example 'Verifying a pact between frontend and backend Given i have not empty tasks A request for get all tasks with GET /tasks/getall returns a response which has status code 200'
+I, [2021-11-06T22:20:02.364319 #15053]  INFO -- : Sending GET request to path: "/tasks/getall" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have not empty tasks"}]}, see debug logs for body
+D, [2021-11-06T22:20:02.364376 #15053] DEBUG -- : body :
+I, [2021-11-06T22:20:02.378440 #15053]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"136", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:20:02 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:20:02.378495 #15053] DEBUG -- : body: {"success":false,"message":"","data":{"todolist":[{"id":"31","name":"Task 1"},{"id":"32","name":"Task 2"},{"id":"33","name":"Task 3"}]}}
+I, [2021-11-06T22:20:02.382988 #15053]  INFO -- : Running example 'Verifying a pact between frontend and backend Given i have a task A request for add new task with POST /tasks/add returns a response which has status code 201'
+I, [2021-11-06T22:20:02.384312 #15053]  INFO -- : Sending POST request to path: "/tasks/add" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have a task"}]}, see debug logs for body
+D, [2021-11-06T22:20:02.384363 #15053] DEBUG -- : body :{"name":"Buy some milk"}
+I, [2021-11-06T22:20:02.386231 #15053]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"67", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:20:02 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:20:02.386272 #15053] DEBUG -- : body: {"success":true,"message":"","data":{"todo":{"id":"35","name":""}}}
+I, [2021-11-06T22:20:42.247046 #15248]  INFO -- : Running example 'Verifying a pact between frontend and backend Given i have not empty tasks A request for get all tasks with GET /tasks/getall returns a response which has status code 200'
+I, [2021-11-06T22:20:42.255116 #15248]  INFO -- : Sending GET request to path: "/tasks/getall" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have not empty tasks"}]}, see debug logs for body
+D, [2021-11-06T22:20:42.255175 #15248] DEBUG -- : body :
+I, [2021-11-06T22:20:42.269415 #15248]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"107", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:20:42 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:20:42.269489 #15248] DEBUG -- : body: {"success":true,"message":"","data":{"todolist":[{"id":"31","name":"Task 1"},{"id":"32","name":"Task 2"}]}}
+I, [2021-11-06T22:20:42.274213 #15248]  INFO -- : Running example 'Verifying a pact between frontend and backend Given i have a task A request for add new task with POST /tasks/add returns a response which has status code 201'
+I, [2021-11-06T22:20:42.275988 #15248]  INFO -- : Sending POST request to path: "/tasks/add" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have a task"}]}, see debug logs for body
+D, [2021-11-06T22:20:42.276046 #15248] DEBUG -- : body :{"name":"Buy some milk"}
+I, [2021-11-06T22:20:42.278434 #15248]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"67", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:20:42 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:20:42.278475 #15248] DEBUG -- : body: {"success":true,"message":"","data":{"todo":{"id":"35","name":""}}}
+I, [2021-11-06T22:23:35.271407 #15639]  INFO -- : Running example 'Verifying a pact between frontend and backend Given i have not empty tasks A request for get all tasks with GET /tasks/getall returns a response which has status code 200'
+I, [2021-11-06T22:23:35.280382 #15639]  INFO -- : Sending GET request to path: "/tasks/getall" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have not empty tasks"}]}, see debug logs for body
+D, [2021-11-06T22:23:35.280443 #15639] DEBUG -- : body :
+I, [2021-11-06T22:23:35.297239 #15639]  INFO -- : Received response with status: 200, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"150", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:23:35 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:23:35.297307 #15639] DEBUG -- : body: {"success":true,"message":"","data":{"todolist":[{"id":"31","name":"Test Task 1"},{"id":"32","name":"Test Task 2"},{"id":"33","name":"Test Task 3"}]}}
+I, [2021-11-06T22:23:35.299131 #15639]  INFO -- : Running example 'Verifying a pact between frontend and backend Given i have a task A request for add new task with POST /tasks/add returns a response which has status code 201'
+I, [2021-11-06T22:23:35.300607 #15639]  INFO -- : Sending POST request to path: "/tasks/add" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i have a task"}]}, see debug logs for body
+D, [2021-11-06T22:23:35.300661 #15639] DEBUG -- : body :{"name":"Buy some milk"}
+I, [2021-11-06T22:23:35.302706 #15639]  INFO -- : Received response with status: 201, headers: {"Access-Control-Allow-Origin"=>"*", "Content-Length"=>"67", "Content-Type"=>"application/json", "Date"=>"Sat, 06 Nov 2021 19:23:35 GMT", "Vary"=>"Origin"}, see debug logs for body
+D, [2021-11-06T22:23:35.302755 #15639] DEBUG -- : body: {"success":true,"message":"","data":{"todo":{"id":"35","name":""}}}

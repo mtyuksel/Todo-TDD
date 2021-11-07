@@ -7,8 +7,11 @@ import (
 )
 
 func main() {
-	taskController := controllers.NewTaskController()
+	LaunchServer()
+}
 
+func LaunchServer() {
+	taskController := controllers.NewTaskController()
 	app := fiber.New()
 
 	app.Use(cors.New(cors.Config{

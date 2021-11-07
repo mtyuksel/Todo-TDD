@@ -17,37 +17,49 @@
         "status": 200,
         "headers": {
         },
-        "body": [
-          {
-            "id": "1",
-            "name": "Buy some milk"
-          },
-          {
-            "id": "2",
-            "name": "Visit parents"
-          },
-          {
-            "id": "3",
-            "name": "Do homewoks"
+        "body": {
+          "success": true,
+          "message": "",
+          "data": {
+            "todolist": [
+              {
+                "id": "1",
+                "name": "Buy some milk"
+              },
+              {
+                "id": "2",
+                "name": "Visit parents"
+              },
+              {
+                "id": "3",
+                "name": "Do homewoks"
+              }
+            ]
           }
-        ],
+        },
         "matchingRules": {
-          "$.body[0].id": {
+          "$.body.message": {
             "match": "type"
           },
-          "$.body[0].name": {
+          "$.body.data.todolist": {
             "match": "type"
           },
-          "$.body[1].id": {
+          "$.body.data.todolist[0].id": {
             "match": "type"
           },
-          "$.body[1].name": {
+          "$.body.data.todolist[0].name": {
             "match": "type"
           },
-          "$.body[2].id": {
+          "$.body.data.todolist[1].id": {
             "match": "type"
           },
-          "$.body[2].name": {
+          "$.body.data.todolist[1].name": {
+            "match": "type"
+          },
+          "$.body.data.todolist[2].id": {
+            "match": "type"
+          },
+          "$.body.data.todolist[2].name": {
             "match": "type"
           }
         }
@@ -68,14 +80,23 @@
         "headers": {
         },
         "body": {
-          "id": "1",
-          "name": "Buy some milk"
+          "success": true,
+          "message": "",
+          "data": {
+            "todo": {
+              "id": "1",
+              "name": "Buy some milk"
+            }
+          }
         },
         "matchingRules": {
-          "$.body.id": {
+          "$.body.message": {
             "match": "type"
           },
-          "$.body.name": {
+          "$.body.data.todo.id": {
+            "match": "type"
+          },
+          "$.body.data.todo.name": {
             "match": "type"
           }
         }

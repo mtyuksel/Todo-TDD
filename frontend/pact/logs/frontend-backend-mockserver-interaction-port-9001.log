@@ -1,5 +1,5 @@
-I, [2021-11-06T21:41:48.840032 #11092]  INFO -- : Registered expected interaction GET /tasks/getall
-D, [2021-11-06T21:41:48.840276 #11092] DEBUG -- : {
+I, [2021-11-06T21:48:23.617166 #11734]  INFO -- : Registered expected interaction GET /tasks/getall
+D, [2021-11-06T21:48:23.617384 #11734] DEBUG -- : {
   "description": "A request for get all tasks",
   "providerState": "i have not empty tasks",
   "request": {
@@ -57,8 +57,8 @@ D, [2021-11-06T21:41:48.840276 #11092] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-11-06T21:41:48.856792 #11092]  INFO -- : Received request GET /tasks/getall
-D, [2021-11-06T21:41:48.856901 #11092] DEBUG -- : {
+I, [2021-11-06T21:48:23.633455 #11734]  INFO -- : Received request GET /tasks/getall
+D, [2021-11-06T21:48:23.633589 #11734] DEBUG -- : {
   "path": "/tasks/getall",
   "query": "",
   "method": "get",
@@ -74,8 +74,8 @@ D, [2021-11-06T21:41:48.856901 #11092] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-11-06T21:41:48.857222 #11092]  INFO -- : Found matching response for GET /tasks/getall
-D, [2021-11-06T21:41:48.857355 #11092] DEBUG -- : {
+I, [2021-11-06T21:48:23.633877 #11734]  INFO -- : Found matching response for GET /tasks/getall
+D, [2021-11-06T21:48:23.634028 #11734] DEBUG -- : {
   "status": 200,
   "headers": {
   },
@@ -124,10 +124,10 @@ D, [2021-11-06T21:41:48.857355 #11092] DEBUG -- : {
     }
   }
 }
-I, [2021-11-06T21:41:48.878664 #11092]  INFO -- : Verifying - interactions matched
-I, [2021-11-06T21:41:48.881939 #11092]  INFO -- : Cleared interactions
-I, [2021-11-06T21:41:48.886354 #11092]  INFO -- : Registered expected interaction POST /tasks/add
-D, [2021-11-06T21:41:48.886451 #11092] DEBUG -- : {
+I, [2021-11-06T21:48:23.655316 #11734]  INFO -- : Verifying - interactions matched
+I, [2021-11-06T21:48:23.659048 #11734]  INFO -- : Cleared interactions
+I, [2021-11-06T21:48:23.664037 #11734]  INFO -- : Registered expected interaction POST /tasks/add
+D, [2021-11-06T21:48:23.664199 #11734] DEBUG -- : {
   "description": "A request for add new task",
   "providerState": "i have a task",
   "request": {
@@ -163,8 +163,8 @@ D, [2021-11-06T21:41:48.886451 #11092] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-11-06T21:41:48.893297 #11092]  INFO -- : Received request POST /tasks/add
-D, [2021-11-06T21:41:48.893425 #11092] DEBUG -- : {
+I, [2021-11-06T21:48:23.671485 #11734]  INFO -- : Received request POST /tasks/add
+D, [2021-11-06T21:48:23.671618 #11734] DEBUG -- : {
   "path": "/tasks/add",
   "query": "",
   "method": "post",
@@ -185,8 +185,8 @@ D, [2021-11-06T21:41:48.893425 #11092] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-11-06T21:41:48.894114 #11092]  INFO -- : Found matching response for POST /tasks/add
-D, [2021-11-06T21:41:48.894210 #11092] DEBUG -- : {
+I, [2021-11-06T21:48:23.672089 #11734]  INFO -- : Found matching response for POST /tasks/add
+D, [2021-11-06T21:48:23.672200 #11734] DEBUG -- : {
   "status": 201,
   "headers": {
   },
@@ -210,7 +210,6 @@ D, [2021-11-06T21:41:48.894210 #11092] DEBUG -- : {
     }
   }
 }
-I, [2021-11-06T21:41:48.900065 #11092]  INFO -- : Verifying - interactions matched
-I, [2021-11-06T21:41:48.903210 #11092]  INFO -- : Cleared interactions
-I, [2021-11-06T21:41:48.906539 #11092]  INFO -- : Merging interactions into pact for backend at /Users/mehmet.yuksel/Desktop/Todo-TDD/frontend/pact/pacts/frontend-backend.json
-E, [2021-11-06T21:41:48.908100 #11092] ERROR -- : An interaction with same description ("A request for get all tasks") and provider state ("i have not empty tasks") but a different response body has already been used. Please use a different description or provider state, or remove any random data in the interaction.
+I, [2021-11-06T21:48:23.678581 #11734]  INFO -- : Verifying - interactions matched
+I, [2021-11-06T21:48:23.682234 #11734]  INFO -- : Cleared interactions
+I, [2021-11-06T21:48:23.685762 #11734]  INFO -- : Merging interactions into pact for backend at /Users/mehmet.yuksel/Desktop/Todo-TDD/frontend/pact/pacts/frontend-backend.json
